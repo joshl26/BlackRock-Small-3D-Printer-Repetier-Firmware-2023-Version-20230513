@@ -58,6 +58,11 @@
 #define FAN_THERMO_MAX_TEMP 60
 #define FAN_THERMO_THERMISTOR_PIN -1
 #define FAN_THERMO_THERMISTOR_TYPE 1
+#undef X_MIN_PIN
+#define X_MIN_PIN ORIG_X_MAX_PIN
+
+#undef Y_MIN_PIN
+#define Y_MIN_PIN 0
 
 // #define EXTERNALSERIAL  use Arduino serial library instead of build in. Requires more ram, has only 63 byte input buffer.
 //  Uncomment the following line if you are using Arduino compatible firmware made for Arduino version earlier then 1.0
@@ -254,7 +259,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_PULLUP_X_MIN true
 #define ENDSTOP_X_MIN_INVERTING false
 #define MIN_HARDWARE_ENDSTOP_X true
-#define ENDSTOP_PULLUP_Y_MIN true
+#define ENDSTOP_PULLUP_Y_MIN false
 #define ENDSTOP_Y_MIN_INVERTING false
 #define MIN_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MIN true
@@ -275,7 +280,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 #define ENDSTOP_PULLUP_X2_MIN false
 #define ENDSTOP_PULLUP_Y2_MIN false
-#define ENDSTOP_PULLUP_Z2_MINMAX false
+#define ENDSTOP_PULLUP_Z2_MINMAX true
 #define ENDSTOP_PULLUP_X2_MAX false
 #define ENDSTOP_PULLUP_Y2_MAX false
 #define ENDSTOP_X2_MIN_INVERTING false
@@ -312,7 +317,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_X_BACK_ON_HOME 1
 #define ENDSTOP_Y_BACK_ON_HOME 1
 #define ENDSTOP_Z_BACK_ON_HOME 1
-#define ALWAYS_CHECK_ENDSTOPS 1
+#define ALWAYS_CHECK_ENDSTOPS 0
 #define MOVE_X_WHEN_HOMED 0
 #define MOVE_Y_WHEN_HOMED 0
 #define MOVE_Z_WHEN_HOMED 0
@@ -328,15 +333,15 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISABLE_E 0
 #define INVERT_X_DIR 0
 #define INVERT_X2_DIR 0
-#define INVERT_Y_DIR -1
+#define INVERT_Y_DIR 0
 #define INVERT_Y2_DIR 0
 #define INVERT_Z_DIR 0
 #define INVERT_Z2_DIR 0
 #define INVERT_Z3_DIR 0
 #define INVERT_Z4_DIR 0
 #define X_HOME_DIR -1
-#define Y_HOME_DIR -1
-#define Z_HOME_DIR 1
+#define Y_HOME_DIR 1
+#define Z_HOME_DIR -1
 #define X_MAX_LENGTH 230
 #define Y_MAX_LENGTH 240
 #define Z_MAX_LENGTH 145.2
@@ -384,7 +389,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_FEEDRATE_X 80
 #define HOMING_FEEDRATE_Y 80
 #define HOMING_FEEDRATE_Z 15
-#define HOMING_ORDER HOME_ORDER_ZXY
+#define HOMING_ORDER HOME_ORDER_XYTZ
 #define ZHOME_PRE_RAISE 2
 #define ZHOME_PRE_RAISE_DISTANCE 2
 #define RAISE_Z_ON_TOOLCHANGE 0
@@ -517,7 +522,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Y2 20
 #define Z_PROBE_X3 20
 #define Z_PROBE_Y3 180
-#define BED_LEVELING_METHOD 0
+#define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
 #define BED_LEVELING_REPETITIONS 5
