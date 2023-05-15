@@ -45,8 +45,6 @@
 // ################ END MANUAL SETTINGS ##########################
 
 #define HOST_RESCUE 1
-#undef FAN_PIN
-#define FAN_PIN 6
 #undef FAN_BOARD_PIN
 #define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
@@ -58,11 +56,6 @@
 #define FAN_THERMO_MAX_TEMP 60
 #define FAN_THERMO_THERMISTOR_PIN -1
 #define FAN_THERMO_THERMISTOR_TYPE 1
-#undef X_MIN_PIN
-#define X_MIN_PIN ORIG_X_MAX_PIN
-
-#undef Y_MIN_PIN
-#define Y_MIN_PIN 0
 
 // #define EXTERNALSERIAL  use Arduino serial library instead of build in. Requires more ram, has only 63 byte input buffer.
 //  Uncomment the following line if you are using Arduino compatible firmware made for Arduino version earlier then 1.0
@@ -259,7 +252,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_PULLUP_X_MIN true
 #define ENDSTOP_X_MIN_INVERTING false
 #define MIN_HARDWARE_ENDSTOP_X true
-#define ENDSTOP_PULLUP_Y_MIN false
+#define ENDSTOP_PULLUP_Y_MIN true
 #define ENDSTOP_Y_MIN_INVERTING false
 #define MIN_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MIN true
