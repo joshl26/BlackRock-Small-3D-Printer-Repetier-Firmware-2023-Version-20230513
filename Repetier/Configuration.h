@@ -333,7 +333,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define INVERT_Z3_DIR 0
 #define INVERT_Z4_DIR 0
 #define X_HOME_DIR -1
-#define Y_HOME_DIR 1
+#define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 #define X_MAX_LENGTH 230
 #define Y_MAX_LENGTH 240
