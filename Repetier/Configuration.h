@@ -383,8 +383,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_FEEDRATE_Y 80
 #define HOMING_FEEDRATE_Z 15
 #define HOMING_ORDER HOME_ORDER_XYTZ
-#define ZHOME_PRE_RAISE 2
-#define ZHOME_PRE_RAISE_DISTANCE 2
+#define ZHOME_PRE_RAISE 1
+#define ZHOME_PRE_RAISE_DISTANCE 20
 #define RAISE_Z_ON_TOOLCHANGE 0
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
@@ -504,7 +504,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT "M340 P0 S650"
 #define Z_PROBE_FINISHED_SCRIPT "M340 P0 S1475"
-#define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
+#define Z_PROBE_RUN_AFTER_EVERY_PROBE "M340 P0 S1988; G4 P2000; M340 P0 S2194; G4 P2000;"
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 200
 #define FEATURE_AUTOLEVEL 1
